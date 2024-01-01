@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Warranty</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			padding:0 15px;
+			font-family: 'Roboto', sans-serif;
+			font-size: 14px;
+			font-weight: 400;
+		}
+		.main__wrapper {
+			background: url(./main_bg.svg);
+			background-position: center ;
+			background-repeat: no-repeat;
+			max-width: 887px;
+			margin: 0 auto;
+			height: 100%;
+		}
+		.warranty__wapper {
+			max-width: 750px;
+			margin: 0 auto;
+		}
+		.warranty__top {
+			text-align: center;
+			padding: 20px 0;
+		}
+		.logo {
+			padding-bottom: 20px;
+			padding-top: 45px;
+		}
+		.warranty__top__title h1 {
+			color: #000;
+			font-family: Roboto;
+			font-size: 24px;
+			font-weight: 600;
+			line-height: normal;
+		}
+		.warranty__content__box {
+			display: -ms-grid;
+    		display: grid;
+			-ms-grid-columns: 1fr 40px 1fr;
+			grid-template-columns: repeat(2,1fr);
+			gap:40px;
+		}
+		.warranty__content__taitle h2 {
+			color: #000;
+			text-align: center;
+			font-family: Roboto;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: normal;
+			margin-bottom: 30px;
+		}
+		.warranty__content__item h3 {
+			color: #000;
+			font-family: Roboto;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			margin-bottom: 10px;
+			text-align: left;
+		}
+		.warranty__content__item ul {
+			padding-left: 16px;
+		}
+		.warranty__content__item ul li {
+			color: #000;
+			font-family: Roboto;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			padding-bottom: 10px;
+			text-align: left;
+		}
+		.warranty__content__item p {
+			color: #000;
+			font-family: Roboto;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-align: left;
+			padding-bottom: 10px;
+		}
+		.warranty__content__item_inner {
+			padding-bottom: 27px;
+		}
+		.customer__information__area h4 {
+			color: #000;
+			font-family: Roboto;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			text-align: left;
+			margin-bottom: 6px;
+		}
+		.customer__information__box {
+			padding: 21px 17px;
+			border: 2px solid #000;
+			padding-bottom: 0;
+		}
+		.customer__information__info {
+			display: flex;
+			gap:9px;
+		}
+		.customer__information__inner {
+			width: 130px;
+			text-align: left;
+		}
+		.vehicle__information__box .customer__information__inner {
+			width: 150px;
+			text-align: left;
+		}
+		.customer__information__inner span {
+			color: #000;
+			font-family: Roboto;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-align: left;
+		}
+		.customer__information__border {
+			border-bottom: 1px solid #000;
+			width: 100%;
+			
+		}
+		.customer__information__inner__right {
+			flex: 1;
+			align-self: flex-end;
+		}
+		.customer__information__info {
+			padding-bottom: 27px;
+		}
+		.customer__information__info:last-chid {
+			padding-bottom: 0;
+		}
+		.warranty__content__taitle {
+			padding-top: 31px;
+		}
+		.vehicle__information__area {
+			padding-bottom: 25px;
+		}
+		.vehicle__information__area h4 {
+			color: #000;
+			font-family: Roboto;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			margin-bottom: 6px;
+			text-align: left;
+		}
+		.vehicle__information__box {
+			padding: 21px 17px;
+			padding-bottom: 8px;
+			border: 2px solid #000;
+		}
+		.vehicle__information__holder {
+			display: flex;
+			align-items: center;
+			gap:40px;
+			padding-bottom: 24px;
+		}
+		.vehicle__information__items {
+			display: flex;
+			align-items: center;
+			max-width: 60%;
+			flex-basis: 60%;
+			gap:8px;
+		}
+		.vehicle--information--items {
+			max-width: 40%;
+			flex-basis: 40%;
+		}
+		.vehicle__information__info_list {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex:1;
+		}
+		.vehicle__information__info__item {
+			border: 1px solid #000;
+			border-top: 0;
+			flex: 1;
+			flex-shrink: 1;
+			text-align: center;
+
+		}
+		.vehicle--information--info--item {
+			padding: 10px 5px;
+			border-right: 0;
+		}
+		.vehicle--information--info--item:last-child {
+			border-right: 1px solid #000;
+		}
+		.vehicle__information__items span {
+			color: #000;
+			font-family: Roboto;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+		.vehicle__information__info_list {
+			color: #000;
+			font-family: Roboto;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+		.vehicle__information_col__inner {
+			display: flex;
+			flex-direction: column;
+			gap:6px;
+		}
+		.vehicle__information__items_col {
+		    display: -ms-grid;
+  			display: grid;
+		 	-ms-grid-columns: 1fr 9px 1fr 9px 1fr;
+		 	grid-template-columns: repeat(3,1fr);
+		 	width: 100%;
+		 	gap:9px;
+		}
+		.vehicle__information__items span {
+			flex-shrink: 1;
+			text-align: left;
+		}
+		.vehicle__information__holder__bottm {
+			padding-bottom: 0;
+		}
+		.warranty__main__content {
+		    padding-bottom: 80px;
+		}
+		/*vehicle__valid__from__area*/
+		.vehicle__valid__from {
+			padding-bottom: 23px;
+		}
+		.vehicle__valid__from {
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+			gap:100px;
+		}
+		.vehicle__valid__from__Col {
+			display: flex;
+			gap:10px;
+		}
+
+		.vehicle__valid__from__inner {
+			display: flex;
+			gap:10px;
+			flex-direction: column;
+		}
+		.vehicle__valid__from__field__border {
+			border: 1px solid #000;
+			border-top: 0;
+			padding: 10px 4px;
+			border-right: 0;
+			width: 23px
+		}
+		.vehicle__valid__from__field__item {
+			display: flex;
+		}
+		.vehicle__valid__from__field__border:last-child {
+			    border-right: 1px solid #000;
+		}
+		.vehicle__valid__from__field {
+		    display: flex;
+		    gap: 10px;
+		}
+		.vehicle__valid__from__text {
+			color: #000;
+			font-family: Roboto;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+		.vehicle__valid__from__date {
+			color: #000;
+			font-family: Roboto;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+		.vehicle--valid--from--Col {
+			 justify-content: flex-end;
+		}
+		.vehicle__valid__from:last-child {
+			padding-bottom: 0;
+		}
+		@media screen and (max-width: 992px) {
+			.vehicle__valid__from {
+    		gap: 40px;
+}
+		}
+		/*vehicle__valid__from__area*/
+	</style>
+</head>
+<body>
+	<div class="main__wrapper">
+		<div class="warranty__wapper">
+			<div class="warranty__top">
+				<div class="logo">
+					<img src="./logo.svg">
+				</div>
+				<div class="warranty__top__title">
+					<h1>matrix Motor Distribution LTD. Warranty Certificate</h1>
+				</div>
+			</div>
+			<div class="warranty__main__content">
+				<div class="vehicle__information__area">
+					<h4>VEHICLE & WARRANTY INFORMATION</h4>
+
+					<div class="vehicle__information__box">
+						<!-- vehicle__information -->
+						<div class="vehicle__information">
+							<div class="vehicle__information__holder">
+								<div class="vehicle__information__items">
+									<span>VIN :</span>
+									<div class="vehicle__information__info_list">
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										<div class="vehicle__information__info__item vehicle--information--info--item "></div>
+										
+									</div>
+								</div>
+								<div class="vehicle__information__items vehicle--information--items">
+									<span>Warranty Period: </span>
+									<div class="vehicle__information__info_list">
+										<div class="vehicle__information__info__item">
+											5 Years
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- vehicle__information -->
+						<!-- customer__information__info -->
+						<div class="customer__information__info">
+							<div class="customer__information__inner">
+								<span>Year, make and model: </span>
+							</div>
+							<div class="customer__information__inner__right">
+								<div class="customer__information__border"></div>
+							</div>
+						</div><!-- customer__information__info -->
+						<!-- vehicle__valid__from__area -->
+						<div class="vehicle__valid__from__area">
+							<div class="vehicle__valid__from">
+								<div class="vehicle__valid__from__Col">
+									<div class="vehicle__valid__from__text">
+										Valid as from:
+									</div>
+									<div class="vehicle__valid__from__field">
+										<!-- vehicle__valid__from__inner -->
+										<div class="vehicle__valid__from__inner">
+											<div class="vehicle__valid__from__field__item">
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+											</div>
+											<div class="vehicle__valid__from__date">
+												day
+											</div>
+										</div><!-- vehicle__valid__from__inner -->
+										<!-- vehicle__valid__from__inner -->
+										<div class="vehicle__valid__from__inner">
+											<div class="vehicle__valid__from__field__item">
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+											</div>
+											<div class="vehicle__valid__from__date">
+												month
+											</div>
+										</div><!-- vehicle__valid__from__inner -->
+										<!-- vehicle__valid__from__inner -->
+										<div class="vehicle__valid__from__inner">
+											<div class="vehicle__valid__from__field__item">
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+											</div>
+											<div class="vehicle__valid__from__date">
+												year
+											</div>
+										</div><!-- vehicle__valid__from__inner -->
+									</div>
+								</div>
+								<div class="vehicle__valid__from__Col vehicle--valid--from--Col">
+									<div class="vehicle__valid__from__text">
+										Valid until: 
+									</div>
+									<div class="vehicle__valid__from__field">
+										<!-- vehicle__valid__from__inner -->
+										<div class="vehicle__valid__from__inner">
+											<div class="vehicle__valid__from__field__item">
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+											</div>
+											<div class="vehicle__valid__from__date">
+												day
+											</div>
+										</div><!-- vehicle__valid__from__inner -->
+										<!-- vehicle__valid__from__inner -->
+										<div class="vehicle__valid__from__inner">
+											<div class="vehicle__valid__from__field__item">
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+											</div>
+											<div class="vehicle__valid__from__date">
+												month
+											</div>
+										</div><!-- vehicle__valid__from__inner -->
+										<!-- vehicle__valid__from__inner -->
+										<div class="vehicle__valid__from__inner">
+											<div class="vehicle__valid__from__field__item">
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+											</div>
+											<div class="vehicle__valid__from__date">
+												year
+											</div>
+										</div><!-- vehicle__valid__from__inner -->
+									</div>
+								</div>
+							</div>
+							<div class="vehicle__valid__from">
+								<div class="vehicle__valid__from__Col">
+									<div class="vehicle__valid__from__text">
+										Contract date:
+									</div>
+									<div class="vehicle__valid__from__field">
+										<!-- vehicle__valid__from__inner -->
+										<div class="vehicle__valid__from__inner">
+											<div class="vehicle__valid__from__field__item">
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+											</div>
+											<div class="vehicle__valid__from__date">
+												day
+											</div>
+										</div><!-- vehicle__valid__from__inner -->
+										<!-- vehicle__valid__from__inner -->
+										<div class="vehicle__valid__from__inner">
+											<div class="vehicle__valid__from__field__item">
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+											</div>
+											<div class="vehicle__valid__from__date">
+												month
+											</div>
+										</div><!-- vehicle__valid__from__inner -->
+										<!-- vehicle__valid__from__inner -->
+										<div class="vehicle__valid__from__inner">
+											<div class="vehicle__valid__from__field__item">
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+												<div class="vehicle__valid__from__field__border"></div>
+											</div>
+											<div class="vehicle__valid__from__date">
+												year
+											</div>
+										</div><!-- vehicle__valid__from__inner -->
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<!-- vehicle__valid__from__area -->
+
+
+
+						
+					</div>
+				</div>
+				<div class="customer__information__area">
+					<h4>CUSTOMER & DEALER INFORMATION</h4>
+					<div class="customer__information__box">
+						<div class="customer__information__info">
+							<div class="customer__information__inner">
+								<span>Customer name: </span>
+							</div>
+							<div class="customer__information__inner__right">
+								<div class="customer__information__border"></div>
+							</div>
+						</div>
+						<div class="customer__information__info">
+							<div class="customer__information__inner">
+								<span>Dealer name: </span>
+							</div>
+							<div class="customer__information__inner__right">
+								<div class="customer__information__border"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="warranty__content__taitle">
+					<h2>Warranty Conditions</h2>
+				</div>
+				<div class="warranty__content__box">
+					<div class="warranty__content__item">
+						<div class="warranty__content__item_inner">
+							<h3>VEHICLE OWNER’S RESPONSIBILITIES</h3>
+							<ul>
+								<li>Vehicle Owner’s must properly use, maintain and care for the vehicle as outlined in the Owner’s Manual and determined by Matrix</li>
+								<li>Owner must service vehicle according to a Matrix accepted service schedule</li>
+								<li>Owner must maintain all service records of work performed to vehicle</li>
+								<li>Only an authorized Matrix dealer or service centre can perform warranty repairs</li>
+								<li>Periodic service and inspections are considered regular maintenance and not reimbursable</li>
+								<li>All warranty repairs require authorization by the Administrator</li>
+								<li>All Matrix products require an initial dealer pre-delivery inspection and set up to ensure proper operation and safety</li>
+							</ul>
+						</div>
+						<div class="">
+							<h3>LIMIT OF LIABILITY</h3>
+							<p>The total amount of all benefits paid or payable under this warranty shall in no event exceed $5,000. Parts and labour expenses covered under this warranty shall be limited to the manufacturer suggested retail price for parts and labour allowances as approved by Matrix and the Administrator.</p>
+						</div>
+						
+					</div>
+					<div class="warranty__content__item">
+						<div class="warranty__content__item_inner">
+							<h3>WARRANTY PERIODS</h3>
+						<p>Warranty coverage begins on the date the vehicle is first sold to the consumer or the original in-service date and expires at the end of the term listed in Covered Parts below. Warranty coverage is automatically transferred to subsequent vehicle owners. Proof of purchase will be required for all warranty claims.</p>
+						</div>
+						<div class="">
+							<h3>COVERED WARRANTY PARTS</h3>
+							<p>This warranty covers the reasonable cost to repair defects in material or workmanship reported during the applicable warranty period and which occur under normal use:
+							</p>
+							<ul>
+								<li>Engine: 5 Years</li>
+								<li>Drivetrain Components: 5 Years</li>
+								<li>Exhaust System: 1 Year</li>
+								<li>Suspension/Steering: 1 Year</li>
+								<li>Wire Harness/E.C.U.: 1 Year</li>
+								<li>Clutch/CVT/Secondary Clutch: 180 days</li>
+								<li>Battery (when purchased with a new vehicle): 6 Months</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
